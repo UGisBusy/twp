@@ -19,7 +19,6 @@ import ManageAdminCoupons from '@pages/user/admin/allCoupons';
 import NewAdminCoupon from '@pages/user/admin/allCoupons/newCoupon';
 import EachAdminCoupon from '@pages/user/admin/allCoupons/[adminCouponID]';
 import NotFound from '@components/NotFound';
-import SearchNotFound from '@components/SearchNotFound';
 import APItest from '@components/APItest';
 import Seller from '@pages/user/seller';
 import Forbidden from '@components/Forbidden';
@@ -46,6 +45,7 @@ import SellerReportEach from '@pages/user/seller/allReports/[sellerReportID]';
 import Callback from '@pages/user/callback';
 import SellerCoupons from '@pages/user/shop/SellerCoupons';
 import ProtectedBoundary from '@components/ProtectedBoundary';
+import Search from '@pages/Search';
 
 function App() {
   return (
@@ -136,7 +136,7 @@ function App() {
 
             <Route path='/coupons' element={<Coupons />} />
 
-            <Route path='/search?' element={<SearchNotFound />} />
+            <Route path='/search?' element={<Search />} />
 
             <Route path='*' element={<NotFound />} />
             <Route path='/forbidden' element={<Forbidden />} />
