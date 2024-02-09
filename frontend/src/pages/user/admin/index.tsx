@@ -34,13 +34,16 @@ const Admin = () => {
     return <NotFound />;
   } else {
     return (
-      <Row style={{ width: '100%', padding: '0', margin: '0' }} className='flex_wrapper'>
+      <Row
+        style={{ width: '100%', padding: '0', margin: '0', flexGrow: 1 }}
+        className='flex_wrapper'
+      >
         <Col xs={12} style={{ width: '100%', padding: '0' }}>
           <div className='user_bg center' />
         </Col>
 
-        <Col xs={12} style={{ padding: '0' }}>
-          <Row style={{ padding: '0', margin: '0', width: '100%' }}>
+        <Col xs={12} style={{ padding: '0', flexGrow: 1, display: 'flex' }}>
+          <Row style={{ padding: '0', margin: '0', width: '100%', flexGrow: 1 }}>
             <Col xs={12} md={3} lg={2} style={{ padding: '0' }}>
               <Row className='user_icon'>
                 <Col xs={12} className='center' style={{ overflow: 'hidden' }}>
@@ -53,7 +56,12 @@ const Admin = () => {
 
               <AdminButtons />
             </Col>
-            <Col xs={12} md={9} lg={10} style={{ padding: '1% 5% 6% 5%' }}>
+            <Col
+              xs={12}
+              md={9}
+              lg={10}
+              style={{ padding: '1% 5% 0% 5%', flexGrow: 1, display: 'flex' }}
+            >
               <Outlet />
             </Col>
           </Row>

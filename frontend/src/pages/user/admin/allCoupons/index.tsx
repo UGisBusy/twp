@@ -71,7 +71,7 @@ const ManageAdminCoupons = () => {
   }
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       <Row>
         {/* display title for desktop */}
         <div className='disappear_phone disappear_tablet' style={{ paddingTop: '6%' }}>
@@ -154,7 +154,7 @@ const ManageAdminCoupons = () => {
           </div>
         </Row>
       </Row>
-      <div className='center'>
+      <div className='center' style={{ padding: '2%' }}>
         <Pagination limit={itemLimit} isMore={isMore} />
       </div>
     </div>

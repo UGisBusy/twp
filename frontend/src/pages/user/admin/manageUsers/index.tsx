@@ -71,17 +71,19 @@ const ManageUser = () => {
   }
 
   return (
-    <div>
+    <div style={{ flexGrow: 1 }}>
       <Row>
         <Col md={12} xs={12} className='title'>
           Manage Users
         </Col>
       </Row>
       <UserTableHeader />
-      {fetchedData.map((data, index) => (
-        <UserTableRow data={data} key={index} />
-      ))}
-      <div className='center'>
+      <div style={{ flexGrow: 9 }}>
+        {fetchedData.map((data, index) => (
+          <UserTableRow data={data} key={index} />
+        ))}
+      </div>
+      <div className='center' style={{ flexGrow: 1 }}>
         <Pagination limit={itemLimit} isMore={isMore} />
       </div>
     </div>
